@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Моя погода</string>
+    <string name="day_forecast">Прогноз на 5 дней</string>
+    <string name="settings">Настройки</string>
+    <string name="geocoding">Геолокация</string>
+    <string name="txt_geo">Если включить, прогноз станет точнее</string>
+    <string name="place">Место</string>
+    <string name="current_location">Текущее место</string>
+    <string name="many_others">Задать другое</string>
+    <string name="max_temp">Макс, t</string>
+    <string name="min_temp">Мин, t</string>
+    <string name="no_internet_con">No internet connection</string>
+    <string name="conversion_error">Conversion Error</string>
+    <string name="network_failure">Network Failure</string>
+    <string name="update_weather">Обновить данные о текущей погоде</string>
+</resources>

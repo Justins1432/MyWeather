@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/txtPlaceLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/current_location"
+            android:textColor="@color/txt_geo_text"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <!--
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:endIconMode="clear_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_input_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:hint="@string/many_others"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:maxLines="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/searchCityImg"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:src="@drawable/search_city" /> -->
+
+            <SearchView
+                android:id="@+id/searchViewCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textCursorDrawable="@null"
+                app:iconifiedByDefault="false"
+                app:queryBackground="@null"
+                />
+
+        </LinearLayout>
+
+        <!--
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerSearch"
+            android:layout_width="match_parent"
+            android:layout_height="350dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/shimmer_search_city_item"/>
+
+                <include layout="@layout/shimmer_search_city_item"/>
+
+                <include layout="@layout/shimmer_search_city_item"/>
+
+                <include layout="@layout/shimmer_search_city_item"/>
+
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout> -->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_cities"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:focusableInTouchMode="false"
+            android:isScrollContainer="false"
+            tools:listitem="@layout/search_city_item"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
